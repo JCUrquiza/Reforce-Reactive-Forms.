@@ -8,8 +8,9 @@
   <div class="row mb-3">
     <div class="col">
       <label class="form-label">Continente:</label>
-      <select class="form-control">
+      <select class="form-control" formControlName="region">
         <option>-- Seleccione continente --</option>
+        <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
       </select>
     </div>
   </div>
